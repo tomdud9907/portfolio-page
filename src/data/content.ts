@@ -16,7 +16,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Software Engineer',
     company: 'Sky',
-    period: '2021 — now',
+    period: '05.2022 — 01.2026',
     summary: 'Full-stack development for large-scale Sky Mobile applications and legacy API refactoring.',
     keyImpact: [
       'Led delivery of customer-facing features in high-traffic Sky Mobile journeys across the UK and Ireland market.',
@@ -28,7 +28,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Junior Software Developer',
     company: 'Northcoders',
-    period: '2020 — 2021',
+    period: '09.2021 — 05.2022',
     summary: 'Early career role focusing on React.js, Node.js and JavaScript development.',
     keyImpact: [
       'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
@@ -38,16 +38,14 @@ export const experiences: ExperienceItem[] = [
     technologies: ['Node.js', 'React', 'PostgreSQL', 'REST APIs', 'Git'],
   },
   {
-    role: 'Junior Web Developer',
-    company: 'Pixel Forge',
-    period: '2019 — 2021',
-    summary: 'Created landing pages and interactive sections for client websites.',
+    role: 'Director',
+    company: 'TG-Scents',
+    period: '2017 — 2021',
+    summary: 'Ran an eBay shop, sourcing from China and managing listings and sales.',
     keyImpact: [
-      'Built marketing landing pages and reusable content sections for multiple client projects.',
-      'Improved accessibility and semantic structure across existing pages.',
-      'Added subtle animations and UI polish to increase engagement and perceived quality.',
+      'Founded and operated an online eBay business by overseeing product sourcing, creating and optimising listings, managing order fulfilment, and delivering end-to-end customer support to drive sales performance and customer satisfaction'
     ],
-    technologies: ['JavaScript', 'SCSS', 'GSAP'],
+    technologies: ['eBay', 'Alibaba', 'Excel', 'Customer Service'],
   },
 ]
 

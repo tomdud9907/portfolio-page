@@ -2,28 +2,14 @@ import { experiences } from '../data/content'
 
 const extraPlaceholders = [
   {
-    role: 'UI Engineer',
-    company: 'Northbound Studio',
-    period: '2018 — 2019',
-    summary: 'Built reusable UI patterns for editorial and e-commerce interfaces.',
+    role: 'Recruitment Consultant',
+    company: '24/7 Recruitment',
+    period: '2016 — 2018',
+    summary: 'Managed sourcing, placements and client relations, regularly hitting hiring goals.',
     keyImpact: [
-      'Designed modular UI building blocks to speed up delivery across campaigns.',
-      'Improved visual consistency by introducing shared spacing and typography patterns.',
-      'Partnered with designers to refine interaction details and transitions.',
+      'Sourced, screened, and placed candidates to meet client needs while building strong professional relationships and achieving placement targets.',
     ],
-    technologies: ['Vue', 'Sass', 'Storybook'],
-  },
-  {
-    role: 'Web Developer Intern',
-    company: 'Bright Path Agency',
-    period: '2017 — 2018',
-    summary: 'Supported frontend implementation for client campaigns and microsites.',
-    keyImpact: [
-      'Built responsive templates and content sections for client landing pages.',
-      'Handled bug fixes and page optimization tasks to improve load performance.',
-      'Added animation polish and QA fixes under senior developer mentorship.',
-    ],
-    technologies: ['JavaScript', 'Bootstrap', 'Gulp'],
+    technologies: ['Excel', 'PowerBI', 'Universe'],
   },
 ]
 
