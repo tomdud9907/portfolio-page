@@ -42,7 +42,7 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
         <h2 className="text-3xl font-bold sm:text-4xl">Selected timeline</h2>
 
         <div className="experience-list mt-6">
-          {experiences.map((item, index) => {
+          {experiences.slice(0, 2).map((item, index) => {
             const isOpen = openItem === index
             const sideClass = index % 2 === 0 ? 'md:justify-self-start experience-left' : 'md:justify-self-end experience-right'
 
@@ -61,7 +61,7 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
                     <p className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--accent)]">{item.period}</p>
                     <h3 className="my-1 text-xl font-semibold text-[color:var(--accent)]">{item.role}</h3>
                     <p className="text-[color:var(--text-muted)]">{item.company}</p>
-                    <p className="mt-1 text-[color:var(--text-muted)]">{item.summary}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-[color:var(--text-main)]/78">{item.summary}</p>
                   </div>
                   <span className={`text-lg text-[color:var(--accent)] transition ${isOpen ? 'rotate-180' : ''}`}>⌃</span>
                 </button>

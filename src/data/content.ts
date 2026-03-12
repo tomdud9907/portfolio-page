@@ -17,10 +17,9 @@ export const experiences: ExperienceItem[] = [
     role: 'Software Engineer',
     company: 'Sky',
     period: '2021 — now',
-    summary:
-      'Built and maintained customer-facing features for the Sky Mobile web platform (sky.com) used by customers across the UK and Ireland, working within a large-scale React and TypeScript codebase.',
+    summary: 'Full-stack development for large-scale Sky Mobile applications and legacy API refactoring.',
     keyImpact: [
-      'Built and maintained customer-facing features for the Sky Mobile web platform (sky.com) used by customers across the UK and Ireland, working within a large-scale React and TypeScript codebase.',
+      'Led delivery of customer-facing features in high-traffic Sky Mobile journeys across the UK and Ireland market.',
       'Contributed to the launch of Sky Mobile Ireland, collaborating with product, design and platform teams to deliver new functionality and ensure platform readiness for a new market.',
       'Improved platform stability and maintainability by addressing technical debt, enhancing component reusability and participating in architecture and code review discussions across the Sky digital ecosystem.',
     ],
@@ -30,8 +29,7 @@ export const experiences: ExperienceItem[] = [
     role: 'Junior Software Developer',
     company: 'Northcoders',
     period: '2020 — 2021',
-    summary:
-      'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
+    summary: 'Early career role focusing on React.js, Node.js and JavaScript development.',
     keyImpact: [
       'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
       'Developed a production-style news platform with pagination, sorting and API integration, mirroring real-world application architecture.',
