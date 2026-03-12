@@ -124,6 +124,44 @@
       shine 3.2s ease-in-out infinite;
   }
 
+
+  .code-card {
+    box-shadow: 0 18px 48px rgba(2, 6, 23, 0.35);
+  }
+
+  .code-topbar {
+    background: color-mix(in oklab, var(--surface) 85%, #0b1020 15%);
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  .dot-red {
+    background: #fda4af;
+  }
+
+  .dot-yellow {
+    background: #fde68a;
+  }
+
+  .dot-green {
+    background: #86efac;
+  }
+
+  .code-body {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  }
+
+  .code-line {
+    opacity: 0;
+    transform: translateY(3px);
+    clip-path: inset(0 100% 0 0);
+    animation: code-type 680ms steps(24, end) forwards;
+  }
   .experience-list {
     position: relative;
     display: grid;
@@ -229,5 +267,19 @@
   }
   50% {
     transform: translate3d(0, 24px, 0);
+  }
+}
+
+
+@keyframes code-type {
+  0% {
+    opacity: 0;
+    transform: translateY(3px);
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
   }
 }
