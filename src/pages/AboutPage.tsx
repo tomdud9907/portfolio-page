@@ -18,16 +18,69 @@ const technologies = [
   'Optimizely',
 ]
 
-const codePreviewLines = [
-  'const developer = {',
-  '  name: "Tomasz Duda",',
-  '  role: "Full-stack Developer",',
-  '  location: "Leeds, UK",',
-  '  focus: "AI-driven productivity",',
-  '  tools: ["OpenCode CLI", "AI Agents"],',
-  '  stack: ["React", "TypeScript", "Node.js"],',
-  '  mission: () => "Ship production-ready apps"',
-  '};',
+type CodeToken = {
+  text: string
+  kind?: 'keyword' | 'property' | 'string' | 'accent' | 'plain'
+}
+
+const codePreviewLines: CodeToken[][] = [
+  [
+    { text: 'const ', kind: 'keyword' },
+    { text: 'developer ', kind: 'plain' },
+    { text: '= ', kind: 'plain' },
+    { text: '{', kind: 'accent' },
+  ],
+  [
+    { text: '  name', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '"Tomasz Duda"', kind: 'string' },
+    { text: ',', kind: 'plain' },
+  ],
+  [
+    { text: '  role', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '"Full-stack Developer"', kind: 'string' },
+    { text: ',', kind: 'plain' },
+  ],
+  [
+    { text: '  location', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '"Leeds, UK"', kind: 'string' },
+    { text: ',', kind: 'plain' },
+  ],
+  [
+    { text: '  focus', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '"AI-driven productivity"', kind: 'string' },
+    { text: ',', kind: 'plain' },
+  ],
+  [
+    { text: '  tools', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '[', kind: 'accent' },
+    { text: '"OpenCode CLI"', kind: 'string' },
+    { text: ', ', kind: 'plain' },
+    { text: '"AI Agents"', kind: 'string' },
+    { text: '],', kind: 'accent' },
+  ],
+  [
+    { text: '  stack', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '[', kind: 'accent' },
+    { text: '"React"', kind: 'string' },
+    { text: ', ', kind: 'plain' },
+    { text: '"TypeScript"', kind: 'string' },
+    { text: ', ', kind: 'plain' },
+    { text: '"Node.js"', kind: 'string' },
+    { text: '],', kind: 'accent' },
+  ],
+  [
+    { text: '  mission', kind: 'property' },
+    { text: ': ', kind: 'plain' },
+    { text: '() => ', kind: 'accent' },
+    { text: '"Ship production-ready apps"', kind: 'string' },
+  ],
+  [{ text: '};', kind: 'accent' }],
 ]
 
 export function AboutPage() {
@@ -79,8 +132,12 @@ export function AboutPage() {
 
           <pre className="code-body m-0 p-4 text-sm leading-7 text-[color:var(--text-main)]/88">
             {codePreviewLines.map((line, index) => (
-              <code key={line} className="code-line block" style={{ animationDelay: `${index * 180}ms` }}>
-                {line}
+              <code key={`line-${index}`} className="code-line block" style={{ animationDelay: `${index * 320}ms` }}>
+                {line.map((token, tokenIndex) => (
+                  <span key={`token-${index}-${tokenIndex}`} className={`code-token ${token.kind ? `code-${token.kind}` : ''}`}>
+                    {token.text}
+                  </span>
+                ))}
               </code>
             ))}
           </pre>

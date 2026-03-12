@@ -160,8 +160,32 @@
     opacity: 0;
     transform: translateY(3px);
     clip-path: inset(0 100% 0 0);
-    animation: code-type 680ms steps(24, end) forwards;
+    animation: code-type 1200ms steps(28, end) forwards;
   }
+  .code-token {
+    color: color-mix(in oklab, var(--text-main) 90%, transparent);
+  }
+
+  .code-keyword {
+    color: #c4b5fd;
+  }
+
+  .code-property {
+    color: #93c5fd;
+  }
+
+  .code-string {
+    color: #86efac;
+  }
+
+  .code-accent {
+    color: #f9a8d4;
+  }
+
+  .code-plain {
+    color: color-mix(in oklab, var(--text-main) 90%, transparent);
+  }
+
   .experience-list {
     position: relative;
     display: grid;
