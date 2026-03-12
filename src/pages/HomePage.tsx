@@ -21,8 +21,8 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
         <h1 className="max-w-[13ch] text-4xl leading-[1.08] font-bold sm:text-6xl">
           Hi, I&apos;m <span className="animated-name brand-font align-baseline">Tomasz Duda</span>
         </h1>
-        <p className="mt-5 max-w-2xl text-[color:var(--text-muted)] sm:text-lg">
-          I build modern, smooth, and interactive web experiences with React and TypeScript.
+        <p className="animated-subtitle mt-5 max-w-2xl text-[color:var(--text-muted)] sm:text-lg">
+          Software engineer focused on React and TypeScript, experienced in building and scaling large customer-facing platforms such as Sky Mobile.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">
@@ -177,7 +177,9 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
 
         <div className="mt-6 flex items-center gap-4">
           <a
-            href="#"
+            href="https://github.com/tomdud9907"
+            target="_blank"
+            rel="noreferrer"
             aria-label="GitHub profile"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] text-[color:var(--text-main)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
           >
@@ -186,7 +188,9 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
             </svg>
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/tomasz-duda-a27754256/"
+            target="_blank"
+            rel="noreferrer"
             aria-label="LinkedIn profile"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] text-[color:var(--text-main)] transition hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"
           >

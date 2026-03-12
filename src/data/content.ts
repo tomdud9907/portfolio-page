@@ -7,9 +7,9 @@ export const navItems: NavItem[] = [
 ]
 
 export const socialLinks = [
-  { label: 'GitHub', href: '#' },
-  { label: 'LinkedIn', href: '#' },
-  { label: 'Email', href: 'mailto:tomasz@example.com' },
+  { label: 'GitHub', href: 'https://github.com/tomdud9907' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tomasz-duda-a27754256/' },
+  { label: 'Email', href: 'mailto:tomdud9907@gmail.com' },
 ]
 
 export const experiences: ExperienceItem[] = [
