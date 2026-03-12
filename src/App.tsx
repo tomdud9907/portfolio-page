@@ -20,6 +20,7 @@ const experiences = [
     summary: 'Leading UI architecture and mentoring front-end team for product platform.',
     details:
       'Built design-system foundations, improved app performance, and introduced reusable animation patterns across key customer flows.',
+    technologies: ['React', 'TypeScript', 'Framer Motion'],
   },
   {
     role: 'Front-end Developer',
@@ -28,6 +29,7 @@ const experiences = [
     summary: 'Delivered responsive product pages and dashboard modules in React + TypeScript.',
     details:
       'Implemented modular component structure, collaborated closely with design, and reduced CSS bundle size by introducing scoped styling conventions.',
+    technologies: ['Next.js', 'Tailwind', 'Chart.js'],
   },
   {
     role: 'Junior Web Developer',
@@ -36,14 +38,34 @@ const experiences = [
     summary: 'Created landing pages and interactive sections for client websites.',
     details:
       'Focused on clean semantic HTML, animation polish, and accessibility fixes that improved Lighthouse and usability scores.',
+    technologies: ['JavaScript', 'SCSS', 'GSAP'],
+  },
+]
+
+const projects = [
+  {
+    name: 'Fintrack Dashboard',
+    type: 'SaaS platform',
+    summary: 'Analytics-heavy dashboard with modular widgets and custom chart interactions.',
+  },
+  {
+    name: 'Studio Portfolio',
+    type: 'Marketing site',
+    summary: 'High-conversion landing pages with motion-driven storytelling and lead capture.',
+  },
+  {
+    name: 'DevFlow Workspace',
+    type: 'Productivity app',
+    summary: 'Collaborative project board with realtime activity feed and task automation UX.',
   },
 ]
 
 export default function App() {
   const [openItem, setOpenItem] = useState<number | null>(0)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   return (
-    <main className="landing">
+    <main className={`landing ${isDarkMode ? '' : 'theme-light'}`}>
       <div className="aurora aurora--one" aria-hidden="true" />
       <div className="aurora aurora--two" aria-hidden="true" />
 
@@ -59,6 +81,16 @@ export default function App() {
                 <a href={item.href}>{item.label}</a>
               </li>
             ))}
+            <li>
+              <button
+                type="button"
+                className="theme-toggle"
+                onClick={() => setIsDarkMode((prev) => !prev)}
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {isDarkMode ? '☀' : '☾'}
+              </button>
+            </li>
           </ul>
         </nav>
       </header>
@@ -113,6 +145,16 @@ export default function App() {
                     <h3>{item.role}</h3>
                     <p className="experience-company">{item.company}</p>
                     <p className="experience-summary">{item.summary}</p>
+                    <div className="experience-tech">
+                      <span className="experience-tech-label">Technologies</span>
+                      <div className="tech-pills">
+                        {item.technologies.map((tech) => (
+                          <span key={tech} className="tech-pill">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                   <span className="experience-arrow" aria-hidden="true">
                     ↓
@@ -130,6 +172,26 @@ export default function App() {
         <a className="timeline-cta" href="#">
           See full timeline
         </a>
+      </section>
+
+      <section id="projects" className="projects-section">
+        <div className="projects-header">
+          <p className="eyebrow">Projects</p>
+          <h2>Featured placeholders</h2>
+        </div>
+
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <article key={project.name} className="project-card">
+              <p className="project-type">{project.type}</p>
+              <h3>{project.name}</h3>
+              <p>{project.summary}</p>
+              <a href="#" className="project-link">
+                Preview details →
+              </a>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   )
