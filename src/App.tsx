@@ -7,7 +7,7 @@ import { HomePage } from './pages/HomePage'
 import { ProjectsPage } from './pages/ProjectsPage'
 
 export default function App() {
-  const [openItem, setOpenItem] = useState<number | null>(0)
+  const [openItem, setOpenItem] = useState<number | null>(null)
   const [isDarkMode, setIsDarkMode] = useState(true)
   const { pathname, navigate } = usePathname()
 
