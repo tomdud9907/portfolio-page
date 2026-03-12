@@ -17,18 +17,26 @@ export const experiences: ExperienceItem[] = [
     role: 'Software Engineer',
     company: 'Sky',
     period: '2021 — now',
-    summary: 'Built and maintained customer-facing features for the Sky Mobile web platform (sky.com) used by customers across the UK and Ireland, working within a large-scale React and TypeScript codebase.',
-    details:
-      'Contributed to the launch of Sky Mobile Ireland, collaborating with product, design and platform teams to deliver new functionality and ensure platform readiness for a new market. Improved platform stability and maintainability by addressing technical debt, enhancing component reusability and participating in architecture and code review discussions across the Sky digital ecosystem.',
+    summary:
+      'Built and maintained customer-facing features for the Sky Mobile web platform (sky.com) used by customers across the UK and Ireland, working within a large-scale React and TypeScript codebase.',
+    keyImpact: [
+      'Built and maintained customer-facing features for the Sky Mobile web platform (sky.com) used by customers across the UK and Ireland, working within a large-scale React and TypeScript codebase.',
+      'Contributed to the launch of Sky Mobile Ireland, collaborating with product, design and platform teams to deliver new functionality and ensure platform readiness for a new market.',
+      'Improved platform stability and maintainability by addressing technical debt, enhancing component reusability and participating in architecture and code review discussions across the Sky digital ecosystem.',
+    ],
     technologies: ['React', 'TypeScript', 'JavaScript', 'GraphQL', 'Sky Mobile Systems', 'CI/CD'],
   },
   {
     role: 'Junior Software Developer',
     company: 'Northcoders',
     period: '2020 — 2021',
-    summary: 'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
-    details:
-      'Developed a production-style news platform with pagination, sorting and API integration, mirroring real-world application architecture. Worked in an Agile team environment using Git workflows, pull requests, code reviews and pair programming to deliver iterative product features.',
+    summary:
+      'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
+    keyImpact: [
+      'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
+      'Developed a production-style news platform with pagination, sorting and API integration, mirroring real-world application architecture.',
+      'Worked in an Agile team environment using Git workflows, pull requests, code reviews and pair programming to deliver iterative product features.',
+    ],
     technologies: ['Node.js', 'React', 'PostgreSQL', 'REST APIs', 'Git'],
   },
   {
@@ -36,8 +44,11 @@ export const experiences: ExperienceItem[] = [
     company: 'Pixel Forge',
     period: '2019 — 2021',
     summary: 'Created landing pages and interactive sections for client websites.',
-    details:
-      'Focused on clean semantic HTML, animation polish, and accessibility fixes that improved Lighthouse and usability scores.',
+    keyImpact: [
+      'Built marketing landing pages and reusable content sections for multiple client projects.',
+      'Improved accessibility and semantic structure across existing pages.',
+      'Added subtle animations and UI polish to increase engagement and perceived quality.',
+    ],
     technologies: ['JavaScript', 'SCSS', 'GSAP'],
   },
 ]

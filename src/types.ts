@@ -8,7 +8,7 @@ export type ExperienceItem = {
   company: string
   period: string
   summary: string
-  details: string
+  keyImpact: string[]
   technologies: string[]
 }
 

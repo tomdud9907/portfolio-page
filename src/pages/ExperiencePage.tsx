@@ -6,8 +6,11 @@ const extraPlaceholders = [
     company: 'Northbound Studio',
     period: '2018 — 2019',
     summary: 'Built reusable UI patterns for editorial and e-commerce interfaces.',
-    details:
-      'Designed modular UI building blocks and improved consistency across landing pages with reusable components and shared tokens.',
+    keyImpact: [
+      'Designed modular UI building blocks to speed up delivery across campaigns.',
+      'Improved visual consistency by introducing shared spacing and typography patterns.',
+      'Partnered with designers to refine interaction details and transitions.',
+    ],
     technologies: ['Vue', 'Sass', 'Storybook'],
   },
   {
@@ -15,8 +18,11 @@ const extraPlaceholders = [
     company: 'Bright Path Agency',
     period: '2017 — 2018',
     summary: 'Supported frontend implementation for client campaigns and microsites.',
-    details:
-      'Worked on responsive templates, optimization tasks, and animation polish under senior team guidance.',
+    keyImpact: [
+      'Built responsive templates and content sections for client landing pages.',
+      'Handled bug fixes and page optimization tasks to improve load performance.',
+      'Added animation polish and QA fixes under senior developer mentorship.',
+    ],
     technologies: ['JavaScript', 'Bootstrap', 'Gulp'],
   },
 ]
@@ -42,15 +48,25 @@ export function ExperiencePage() {
               key={`${item.role}-${item.company}`}
               className={`experience-card ${sideClass} relative w-full rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] md:w-[calc(50%-1.4rem)]`}
             >
-              <div className="px-4 py-4">
-                <p className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--accent)]">{item.period}</p>
-                <h2 className="my-1 text-xl font-semibold">{item.role}</h2>
-                <p className="text-[color:var(--text-muted)]">{item.company}</p>
-                <p className="mt-2 text-[color:var(--text-muted)]">{item.summary}</p>
-                <p className="mt-2 text-sm text-[color:var(--text-main)]/85">{item.details}</p>
+              <div className="space-y-4 px-4 py-4">
+                <div>
+                  <p className="text-[11px] uppercase tracking-[0.12em] text-[color:var(--accent)]">{item.period}</p>
+                  <h2 className="my-1 text-xl font-semibold text-[color:var(--accent)]">{item.role}</h2>
+                  <p className="text-[color:var(--text-muted)]">{item.company}</p>
+                  <p className="mt-2 text-[color:var(--text-muted)]">{item.summary}</p>
+                </div>
 
-                <div className="mt-3">
-                  <span className="mb-2 block text-[10px] uppercase tracking-[0.12em] text-[color:var(--text-muted)]">
+                <div>
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.11em] text-[color:var(--text-muted)]">Key impact</p>
+                  <ul className="list-disc space-y-1.5 pl-5 text-[color:var(--text-main)]/90 marker:text-[color:var(--accent)]">
+                    {item.keyImpact.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.11em] text-[color:var(--text-muted)]">
                     Technologies
                   </span>
                   <div className="flex flex-wrap gap-2">
