@@ -19,10 +19,12 @@ export function SiteShell({ children, isDarkMode, onToggleTheme, pathname, onNav
         <button
           type="button"
           onClick={() => onNavigate('/')}
-          className="brand-font bg-transparent p-0 text-xl font-bold tracking-wide text-[color:var(--text-main)]"
+          className="brand-font bg-transparent p-0 text-[color:var(--text-main)]"
           aria-label="Tomasz Duda home"
         >
-          Tomasz Duda
+          <span className="inline-flex items-center rounded-xl border border-[color:var(--border)] bg-[color:var(--surface)] px-3 py-1.5 text-2xl font-bold tracking-[0.12em] shadow-[0_0_20px_rgba(56,189,248,0.15)] sm:text-[1.9rem]">
+            TD
+          </span>
         </button>
 
         <nav className="nav-shell" aria-label="Main navigation">

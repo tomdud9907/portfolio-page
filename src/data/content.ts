@@ -14,22 +14,22 @@ export const socialLinks = [
 
 export const experiences: ExperienceItem[] = [
   {
-    role: 'Senior Front-end Developer',
-    company: 'Nova Labs',
-    period: '2023 — now',
-    summary: 'Leading UI architecture and mentoring front-end team for product platform.',
+    role: 'Software Engineer',
+    company: 'Sky',
+    period: '2021 — now',
+    summary: 'Built and maintained customer-facing features for the Sky Mobile web platform (sky.com) used by customers across the UK and Ireland, working within a large-scale React and TypeScript codebase.',
     details:
-      'Built design-system foundations, improved app performance, and introduced reusable animation patterns across key customer flows.',
-    technologies: ['React', 'TypeScript', 'Framer Motion'],
+      'Contributed to the launch of Sky Mobile Ireland, collaborating with product, design and platform teams to deliver new functionality and ensure platform readiness for a new market. Improved platform stability and maintainability by addressing technical debt, enhancing component reusability and participating in architecture and code review discussions across the Sky digital ecosystem.',
+    technologies: ['React', 'TypeScript', 'JavaScript', 'GraphQL', 'Sky Mobile Systems', 'CI/CD'],
   },
   {
-    role: 'Front-end Developer',
-    company: 'Blue Orbit',
-    period: '2021 — 2023',
-    summary: 'Delivered responsive product pages and dashboard modules in React + TypeScript.',
+    role: 'Junior Software Developer',
+    company: 'Northcoders',
+    period: '2020 — 2021',
+    summary: 'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
     details:
-      'Implemented modular component structure, collaborated closely with design, and reduced CSS bundle size by introducing scoped styling conventions.',
-    technologies: ['Next.js', 'Tailwind', 'Chart.js'],
+      'Developed a production-style news platform with pagination, sorting and API integration, mirroring real-world application architecture. Worked in an Agile team environment using Git workflows, pull requests, code reviews and pair programming to deliver iterative product features.',
+    technologies: ['Node.js', 'React', 'PostgreSQL', 'REST APIs', 'Git'],
   },
   {
     role: 'Junior Web Developer',
