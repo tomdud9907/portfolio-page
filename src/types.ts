@@ -16,4 +16,7 @@ export type ProjectItem = {
   name: string
   type: string
   summary: string
+  githubUrl: string
+  technologies: string[]
+  imagePlaceholder: string
 }
