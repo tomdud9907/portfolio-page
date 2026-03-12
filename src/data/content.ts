@@ -38,16 +38,24 @@ export const experiences: ExperienceItem[] = [
     technologies: ['Node.js', 'React', 'PostgreSQL', 'REST APIs', 'Git'],
   },
   {
-    role: 'Junior Web Developer',
-    company: 'Pixel Forge',
-    period: '2019 — 2021',
-    summary: 'Created landing pages and interactive sections for client websites.',
+    role: 'Director',
+    company: 'TG-Scents',
+    period: '2019 — 2020',
+    summary: 'Ran an eBay shop, sourcing from China and managing listings and sales.',
     keyImpact: [
-      'Built marketing landing pages and reusable content sections for multiple client projects.',
-      'Improved accessibility and semantic structure across existing pages.',
-      'Added subtle animations and UI polish to increase engagement and perceived quality.',
+      'Founded and operated an online eBay business by overseeing product sourcing, creating and optimising listings, managing order fulfilment, and delivering end-to-end customer support to drive sales performance and customer satisfaction.',
     ],
-    technologies: ['JavaScript', 'SCSS', 'GSAP'],
+    technologies: ['eBay', 'Product Sourcing', 'E-commerce', 'Customer Support'],
+  },
+  {
+    role: 'Recruitment Consultant',
+    company: '24/7 Recruitment',
+    period: '2017 — 2019',
+    summary: 'Managed sourcing, placements and client relations, regularly hitting hiring goals.',
+    keyImpact: [
+      'Sourced, screened, and placed candidates to meet client needs while building strong professional relationships and achieving placement targets.',
+    ],
+    technologies: ['Recruitment', 'Candidate Screening', 'Client Relations', 'Placements'],
   },
 ]
 
