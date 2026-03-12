@@ -21,7 +21,7 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
         <h1 className="max-w-[13ch] text-4xl leading-[1.08] font-bold sm:text-6xl">
           Hi, I&apos;m <span className="animated-name brand-font align-baseline">Tomasz Duda</span>
         </h1>
-        <p className="animated-subtitle mt-5 max-w-2xl text-[color:var(--text-muted)] sm:text-lg">
+        <p className="mt-5 max-w-2xl text-[color:var(--text-muted)] sm:text-lg">
           Software engineer focused on React and TypeScript, experienced in building and scaling large customer-facing platforms such as Sky Mobile.
         </p>
 

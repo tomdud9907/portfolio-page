@@ -124,20 +124,6 @@
       shine 3.2s ease-in-out 1 forwards;
   }
 
-  .animated-subtitle {
-    display: inline-block;
-    white-space: normal;
-    border-right: 2px solid color-mix(in oklab, var(--text-main) 82%, transparent);
-    -webkit-mask-image: linear-gradient(90deg, #000 0 0);
-    -webkit-mask-size: 0% 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-image: linear-gradient(90deg, #000 0 0);
-    mask-size: 0% 100%;
-    mask-repeat: no-repeat;
-    opacity: 0;
-    animation: subtitle-reveal 4.8s steps(40, end) 3.45s 1 forwards, caret 4.8s steps(40, end) 3.45s 1 forwards;
-  }
-
 
   .code-card {
     box-shadow: 0 18px 48px rgba(2, 6, 23, 0.35);
@@ -252,21 +238,6 @@
     }
   }
 }
-
-
-@keyframes subtitle-reveal {
-  0% {
-    opacity: 1;
-    -webkit-mask-size: 0% 100%;
-    mask-size: 0% 100%;
-  }
-  100% {
-    opacity: 1;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-  }
-}
-
 @keyframes typing-mask {
   0% {
     -webkit-mask-size: 0% 100%;

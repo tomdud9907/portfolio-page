@@ -1,42 +1,14 @@
 import { experiences } from '../data/content'
 
-const extraPlaceholders = [
-  {
-    role: 'UI Engineer',
-    company: 'Northbound Studio',
-    period: '2018 — 2019',
-    summary: 'Built reusable UI patterns for editorial and e-commerce interfaces.',
-    keyImpact: [
-      'Designed modular UI building blocks to speed up delivery across campaigns.',
-      'Improved visual consistency by introducing shared spacing and typography patterns.',
-      'Partnered with designers to refine interaction details and transitions.',
-    ],
-    technologies: ['Vue', 'Sass', 'Storybook'],
-  },
-  {
-    role: 'Web Developer Intern',
-    company: 'Bright Path Agency',
-    period: '2017 — 2018',
-    summary: 'Supported frontend implementation for client campaigns and microsites.',
-    keyImpact: [
-      'Built responsive templates and content sections for client landing pages.',
-      'Handled bug fixes and page optimization tasks to improve load performance.',
-      'Added animation polish and QA fixes under senior developer mentorship.',
-    ],
-    technologies: ['JavaScript', 'Bootstrap', 'Gulp'],
-  },
-]
-
-const fullTimeline = [...experiences, ...extraPlaceholders]
-
 export function ExperiencePage() {
+  const fullTimeline = experiences.slice(0, 4)
+
   return (
     <section className="mx-auto mt-16 w-full max-w-6xl">
       <p className="mb-2 text-xs uppercase tracking-[0.18em] text-[color:var(--accent)]">Experience</p>
       <h1 className="text-4xl font-bold sm:text-5xl">Full experience timeline</h1>
       <p className="mt-4 max-w-3xl text-[color:var(--text-muted)]">
-        Placeholder timeline styled like homepage, extended with more roles so you can later replace content with real
-        milestones and achievements.
+        Professional timeline with key roles and impact highlights.
       </p>
 
       <div className="experience-list mt-8">
