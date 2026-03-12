@@ -70,12 +70,12 @@ export default function App() {
       <div className="aurora aurora-two" aria-hidden="true" />
 
       <header className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <a href="#" className="text-xl font-bold tracking-wide text-[color:var(--text-main)]" aria-label="Tomasz Duda home">
+        <a href="#" className="brand-font text-xl font-bold tracking-wide text-[color:var(--text-main)]" aria-label="Tomasz Duda home">
           Tomasz Duda
         </a>
 
         <nav className="nav-shell" aria-label="Main navigation">
-          <ul className="flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.11em] text-[color:var(--text-muted)] sm:gap-8">
+          <ul className="nav-font flex items-center gap-4 text-xs font-semibold uppercase tracking-[0.11em] text-[color:var(--text-muted)] sm:gap-8">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a href={item.href} className="transition hover:text-[color:var(--text-main)]">
@@ -100,7 +100,7 @@ export default function App() {
       <section className="mx-auto mt-16 w-full max-w-6xl">
         <p className="mb-3 text-xs uppercase tracking-[0.18em] text-[color:var(--accent)]">Front-end Developer</p>
         <h1 className="max-w-[13ch] text-4xl leading-[1.08] font-bold sm:text-6xl">
-          Hi, I&apos;m <span className="animated-name align-baseline">Tomasz Duda</span>
+          Hi, I&apos;m <span className="animated-name brand-font align-baseline">Tomasz Duda</span>
         </h1>
         <p className="mt-5 max-w-2xl text-[color:var(--text-muted)] sm:text-lg">
           I build modern, smooth, and interactive web experiences with React and TypeScript.
