@@ -20,6 +20,7 @@ const experiences = [
     summary: 'Leading UI architecture and mentoring front-end team for product platform.',
     details:
       'Built design-system foundations, improved app performance, and introduced reusable animation patterns across key customer flows.',
+    technologies: ['React', 'TypeScript', 'Framer Motion'],
   },
   {
     role: 'Front-end Developer',
@@ -28,6 +29,7 @@ const experiences = [
     summary: 'Delivered responsive product pages and dashboard modules in React + TypeScript.',
     details:
       'Implemented modular component structure, collaborated closely with design, and reduced CSS bundle size by introducing scoped styling conventions.',
+    technologies: ['Next.js', 'Tailwind', 'Chart.js'],
   },
   {
     role: 'Junior Web Developer',
@@ -36,6 +38,7 @@ const experiences = [
     summary: 'Created landing pages and interactive sections for client websites.',
     details:
       'Focused on clean semantic HTML, animation polish, and accessibility fixes that improved Lighthouse and usability scores.',
+    technologies: ['JavaScript', 'SCSS', 'GSAP'],
   },
 ]
 
@@ -71,26 +74,25 @@ export default function App() {
           Tomasz Duda
         </a>
 
-        <div className="topbar-right">
-          <button
-            type="button"
-            className="theme-toggle"
-            onClick={() => setIsDarkMode((prev) => !prev)}
-            aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {isDarkMode ? '☀️ Day' : '🌙 Night'}
-          </button>
-
-          <nav className="nav-shell" aria-label="Main navigation">
-            <ul className="menu">
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        <nav className="nav-shell" aria-label="Main navigation">
+          <ul className="menu">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+            <li>
+              <button
+                type="button"
+                className="theme-toggle"
+                onClick={() => setIsDarkMode((prev) => !prev)}
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {isDarkMode ? '☀' : '☾'}
+              </button>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <section className="hero">
@@ -143,6 +145,16 @@ export default function App() {
                     <h3>{item.role}</h3>
                     <p className="experience-company">{item.company}</p>
                     <p className="experience-summary">{item.summary}</p>
+                    <div className="experience-tech">
+                      <span className="experience-tech-label">Technologies</span>
+                      <div className="tech-pills">
+                        {item.technologies.map((tech) => (
+                          <span key={tech} className="tech-pill">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                   <span className="experience-arrow" aria-hidden="true">
                     ↓
