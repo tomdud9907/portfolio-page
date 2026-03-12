@@ -1,3 +1,9 @@
+const navItems = [
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '#about' },
+]
+
 const socialLinks = [
   { label: 'GitHub', href: '#' },
   { label: 'LinkedIn', href: '#' },
@@ -11,20 +17,17 @@ export default function App() {
       <div className="aurora aurora--two" aria-hidden="true" />
 
       <header className="topbar">
-        <a href="#" className="brand">
+        <a href="#" className="brand" aria-label="Tomasz Duda home">
           TD
         </a>
-        <nav>
+
+        <nav className="nav-shell" aria-label="Main navigation">
           <ul className="menu">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
           </ul>
         </nav>
       </header>
@@ -42,7 +45,7 @@ export default function App() {
           <a className="btn btn-primary" href="#projects">
             View projects
           </a>
-          <a className="btn btn-ghost" href="#contact">
+          <a className="btn btn-ghost" href="#about">
             Let&apos;s talk
           </a>
         </div>
