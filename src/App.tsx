@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const navItems = [
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
@@ -10,7 +12,36 @@ const socialLinks = [
   { label: 'Email', href: 'mailto:tomasz@example.com' },
 ]
 
+const experiences = [
+  {
+    role: 'Senior Front-end Developer',
+    company: 'Nova Labs',
+    period: '2023 — now',
+    summary: 'Leading UI architecture and mentoring front-end team for product platform.',
+    details:
+      'Built design-system foundations, improved app performance, and introduced reusable animation patterns across key customer flows.',
+  },
+  {
+    role: 'Front-end Developer',
+    company: 'Blue Orbit',
+    period: '2021 — 2023',
+    summary: 'Delivered responsive product pages and dashboard modules in React + TypeScript.',
+    details:
+      'Implemented modular component structure, collaborated closely with design, and reduced CSS bundle size by introducing scoped styling conventions.',
+  },
+  {
+    role: 'Junior Web Developer',
+    company: 'Pixel Forge',
+    period: '2019 — 2021',
+    summary: 'Created landing pages and interactive sections for client websites.',
+    details:
+      'Focused on clean semantic HTML, animation polish, and accessibility fixes that improved Lighthouse and usability scores.',
+  },
+]
+
 export default function App() {
+  const [openItem, setOpenItem] = useState<number | null>(0)
+
   return (
     <main className="landing">
       <div className="aurora aurora--one" aria-hidden="true" />
@@ -18,7 +49,7 @@ export default function App() {
 
       <header className="topbar">
         <a href="#" className="brand" aria-label="Tomasz Duda home">
-          TD
+          Tomasz Duda
         </a>
 
         <nav className="nav-shell" aria-label="Main navigation">
@@ -57,6 +88,48 @@ export default function App() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section id="experience" className="experience-section">
+        <div className="experience-header">
+          <p className="eyebrow">Experience</p>
+          <h2>Selected timeline</h2>
+        </div>
+
+        <div className="experience-list">
+          {experiences.map((item, index) => {
+            const isOpen = openItem === index
+
+            return (
+              <article className={`experience-card ${isOpen ? 'is-open' : ''}`} key={`${item.role}-${item.company}`}>
+                <button
+                  type="button"
+                  className="experience-toggle"
+                  onClick={() => setOpenItem(isOpen ? null : index)}
+                  aria-expanded={isOpen}
+                >
+                  <div>
+                    <p className="experience-period">{item.period}</p>
+                    <h3>{item.role}</h3>
+                    <p className="experience-company">{item.company}</p>
+                    <p className="experience-summary">{item.summary}</p>
+                  </div>
+                  <span className="experience-arrow" aria-hidden="true">
+                    ↓
+                  </span>
+                </button>
+
+                <div className="experience-details" aria-hidden={!isOpen}>
+                  <p>{item.details}</p>
+                </div>
+              </article>
+            )
+          })}
+        </div>
+
+        <a className="timeline-cta" href="#">
+          See full timeline
+        </a>
       </section>
     </main>
   )
