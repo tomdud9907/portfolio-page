@@ -16,7 +16,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Software Engineer',
     company: 'Sky',
-    period: '2021 — now',
+    period: '05.2023 — 01.2026',
     summary: 'Full-stack development for large-scale Sky Mobile applications and legacy API refactoring.',
     keyImpact: [
       'Led delivery of customer-facing features in high-traffic Sky Mobile journeys across the UK and Ireland market.',
@@ -28,7 +28,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Junior Software Developer',
     company: 'Northcoders',
-    period: '2020 — 2021',
+    period: '10.2022 — 04.2023',
     summary: 'Early career role focusing on React.js, Node.js and JavaScript development.',
     keyImpact: [
       'Built full-stack applications using Node.js, PostgreSQL and React, implementing REST APIs, database queries and responsive front-end interfaces.',
@@ -40,7 +40,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Director',
     company: 'TG-Scents',
-    period: '2019 — 2020',
+    period: '2017 — 2022',
     summary: 'Ran an eBay shop, sourcing from China and managing listings and sales.',
     keyImpact: [
       'Founded and operated an online eBay business by overseeing product sourcing, creating and optimising listings, managing order fulfilment, and delivering end-to-end customer support to drive sales performance and customer satisfaction.',
@@ -50,7 +50,7 @@ export const experiences: ExperienceItem[] = [
   {
     role: 'Recruitment Consultant',
     company: '24/7 Recruitment',
-    period: '2017 — 2019',
+    period: '2016 — 2017',
     summary: 'Managed sourcing, placements and client relations, regularly hitting hiring goals.',
     keyImpact: [
       'Sourced, screened, and placed candidates to meet client needs while building strong professional relationships and achieving placement targets.',
