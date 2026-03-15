@@ -78,7 +78,28 @@ export function AboutPage() {
       <h1 className="text-4xl font-bold sm:text-5xl">Learn more about my background, skills, and professional journey.</h1>
 
       <div className="mt-8 grid items-start gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
+        <aside className="code-card overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)] lg:order-2">
+          <div className="code-topbar flex items-center gap-2 border-b border-[color:var(--border)] px-4 py-3">
+            <span className="dot dot-red" aria-hidden="true" />
+            <span className="dot dot-yellow" aria-hidden="true" />
+            <span className="dot dot-green" aria-hidden="true" />
+            <span className="ml-3 text-xs text-[color:var(--text-muted)]">developer.ts</span>
+          </div>
+
+          <pre className="code-body m-0 overflow-x-auto whitespace-pre-wrap break-words p-3 text-xs leading-6 text-[color:var(--text-main)]/88 sm:p-4 sm:text-sm sm:leading-7">
+            {codePreviewLines.map((line, index) => (
+              <code key={`line-${index}`} className="code-line block" style={{ animationDelay: `${index * 320}ms` }}>
+                {line.map((token, tokenIndex) => (
+                  <span key={`token-${index}-${tokenIndex}`} className={`code-token ${token.kind ? `code-${token.kind}` : ''}`}>
+                    {token.text}
+                  </span>
+                ))}
+              </code>
+            ))}
+          </pre>
+        </aside>
+
+        <div className="lg:order-1">
           <p className="max-w-3xl text-[color:var(--text-muted)] sm:text-lg">
             Full-stack developer with strong React.js expertise and a focus on AI-driven productivity. Proven track
             record in large-scale systems and experience leveraging OpenCode CLI and agents to accelerate the
@@ -109,27 +130,6 @@ export function AboutPage() {
             </div>
           </div>
         </div>
-
-        <aside className="code-card overflow-hidden rounded-2xl border border-[color:var(--border)] bg-[color:var(--surface)]">
-          <div className="code-topbar flex items-center gap-2 border-b border-[color:var(--border)] px-4 py-3">
-            <span className="dot dot-red" aria-hidden="true" />
-            <span className="dot dot-yellow" aria-hidden="true" />
-            <span className="dot dot-green" aria-hidden="true" />
-            <span className="ml-3 text-xs text-[color:var(--text-muted)]">developer.ts</span>
-          </div>
-
-          <pre className="code-body m-0 p-4 text-sm leading-7 text-[color:var(--text-main)]/88">
-            {codePreviewLines.map((line, index) => (
-              <code key={`line-${index}`} className="code-line block" style={{ animationDelay: `${index * 320}ms` }}>
-                {line.map((token, tokenIndex) => (
-                  <span key={`token-${index}-${tokenIndex}`} className={`code-token ${token.kind ? `code-${token.kind}` : ''}`}>
-                    {token.text}
-                  </span>
-                ))}
-              </code>
-            ))}
-          </pre>
-        </aside>
       </div>
     </section>
   )

@@ -19,7 +19,7 @@ export default function App() {
     ) : pathname === '/about' ? (
       <AboutPage />
     ) : (
-      <HomePage openItem={openItem} setOpenItem={setOpenItem} />
+      <HomePage openItem={openItem} setOpenItem={setOpenItem} onNavigate={navigate} />
     )
 
   return (

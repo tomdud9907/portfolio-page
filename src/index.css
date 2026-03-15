@@ -5,6 +5,22 @@
 }
 
 @layer base {
+  html {
+    min-height: 100%;
+    background: #020617;
+  }
+
+  body,
+  #root {
+    min-height: 100vh;
+  }
+
+  body {
+    margin: 0;
+    background: #020617;
+    overflow-x: hidden;
+  }
+
   :root {
     font-family: var(--font-sans);
     line-height: 1.5;
@@ -34,6 +50,8 @@
 
     color: var(--text-main);
     background: var(--bg-main);
+    position: relative;
+    min-height: 100vh;
   }
 
   .theme-light {

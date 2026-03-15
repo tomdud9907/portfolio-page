@@ -3,6 +3,7 @@ import { experiences, projects, socialLinks } from '../data/content'
 type HomePageProps = {
   openItem: number | null
   setOpenItem: (value: number | null) => void
+  onNavigate: (to: string) => void
 }
 
 function GithubIcon() {
@@ -13,7 +14,7 @@ function GithubIcon() {
   )
 }
 
-export function HomePage({ openItem, setOpenItem }: HomePageProps) {
+export function HomePage({ openItem, setOpenItem, onNavigate }: HomePageProps) {
   return (
     <>
       <section className="mx-auto mt-16 w-full max-w-6xl">
@@ -25,12 +26,31 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
           Software engineer focused on React and TypeScript, experienced in building and scaling large customer-facing platforms such as Sky Mobile.
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a className="rounded-full bg-linear-to-r from-sky-500 to-indigo-500 px-5 py-3 text-sm font-semibold text-slate-50" href="/projects">
-            View projects
-          </a>
-          <a className="rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-3 text-sm font-semibold" href="/about">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <button
+            type="button"
+            onClick={() => onNavigate('/projects')}
+            className="w-full rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-3 text-sm font-semibold sm:w-auto"
+          >
+            View my projects
+          </button>
+          <a
+            href="mailto:tomdud9907@gmail.com"
+            onClick={(event) => {
+              event.preventDefault()
+              window.open('mailto:tomdud9907@gmail.com', '_self')
+            }}
+            className="w-full rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-3 text-center text-sm font-semibold sm:w-auto"
+          >
             Let&apos;s talk
+          </a>
+          <a
+            href="https://tomaszduda.vercel.app/Tomasz%20Duda_CV_Final.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="w-full rounded-full bg-linear-to-r from-sky-500 to-indigo-500 px-5 py-3 text-center text-sm font-semibold text-slate-50 sm:w-auto"
+          >
+            View my CV
           </a>
         </div>
 
@@ -71,7 +91,14 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
                     <p className="text-[color:var(--text-muted)]">{item.company}</p>
                     <p className="mt-1 text-sm leading-relaxed text-[color:var(--text-main)]/78">{item.summary}</p>
                   </div>
-                  <span className={`text-lg text-[color:var(--accent)] transition ${isOpen ? 'rotate-180' : ''}`}>⌃</span>
+                  <span
+                    className={`inline-flex text-[color:var(--accent)] transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 20 20" className="h-5 w-5 fill-current">
+                      <path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.13l3.71-3.9a.75.75 0 1 1 1.08 1.04l-4.25 4.46a.75.75 0 0 1-1.08 0L5.21 8.27a.75.75 0 0 1 .02-1.06Z" />
+                    </svg>
+                  </span>
                 </button>
                 <div
                   className={`overflow-hidden border-t transition-all duration-300 ${
@@ -106,6 +133,15 @@ export function HomePage({ openItem, setOpenItem }: HomePageProps) {
               </article>
             )
           })}
+        </div>
+        <div className="mt-8">
+          <button
+            type="button"
+            onClick={() => onNavigate('/experience')}
+            className="rounded-full bg-linear-to-r from-sky-500 to-indigo-500 px-5 py-3 text-sm font-semibold text-slate-50"
+          >
+            See full timeline
+          </button>
         </div>
       </section>
 
