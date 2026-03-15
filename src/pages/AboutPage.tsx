@@ -89,7 +89,7 @@ export function AboutPage() {
           </p>
 
           <a
-            href="mailto:tomdud9907@gmail.com"
+            href="https://tomaszduda.vercel.app/Tomasz%20Duda_CV_Final.pdf"
             className="mt-6 inline-flex rounded-full border border-[color:var(--border)] bg-[color:var(--surface)] px-5 py-3 text-sm font-semibold text-[color:var(--text-main)]"
           >
             View CV
