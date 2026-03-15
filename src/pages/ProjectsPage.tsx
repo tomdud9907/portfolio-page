@@ -14,8 +14,8 @@ export function ProjectsPage() {
       <p className="mb-2 text-xs uppercase tracking-[0.18em] text-[color:var(--accent)]">Projects</p>
       <h1 className="text-4xl font-bold sm:text-5xl">Project archive</h1>
       <p className="mt-4 max-w-3xl text-[color:var(--text-muted)]">
-        Placeholder cards inspired by your reference layout. You can later replace image areas, repository links and tags
-        with real content.
+        A selection of projects focused on practical product delivery, clean UI implementation and full-stack
+        collaboration from concept to production.
       </p>
 
       <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3">

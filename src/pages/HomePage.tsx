@@ -147,7 +147,7 @@ export function HomePage({ openItem, setOpenItem, onNavigate }: HomePageProps) {
 
       <section id="projects" className="mx-auto mt-16 w-full max-w-6xl">
         <p className="mb-2 text-xs uppercase tracking-[0.18em] text-[color:var(--accent)]">Projects</p>
-        <h2 className="text-3xl font-bold sm:text-4xl">Featured placeholders</h2>
+        <h2 className="text-3xl font-bold sm:text-4xl">Featured projects</h2>
 
         <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3">
           {projects.map((project) => (
